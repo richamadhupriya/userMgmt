@@ -1,0 +1,40 @@
+<div class="container">
+
+  <div class=" row">
+    <div class="axis-col-lg-4 axis-col-md-6 axis-col-sm-6 axis-col-xs-12">
+      <div class="form">
+
+        <form [formGroup]="loginFrm" (submit)="login()">
+          
+              <div class="axis-form-group">
+                  <label for="userId" class="axis-control-label">User Id<span class="axis-required-indicator">*</span></label>
+                  <input class="axis-form-control" type="text" formControlName="userId" #userId axis-input-clear autocomplete="off">
+                  <span *ngIf="loginFrm.get('userId').hasError('required')"><span class="axis-required-indicator">Please
+                      enter user id.</span></span>
+                  <span *ngIf="loginFrm.get('userId').hasError('pattern')"><span class="axis-required-indicator">Special
+                      characters are not allowed.</span></span>
+                </div>
+      
+                <div class="axis-form-group">
+                  <label for="password" class="axis-control-label">Password<span class="axis-required-indicator">*</span></label>
+                  <input class="axis-form-control" type="password" formControlName="password" #password axis-input-clear
+                    autocomplete="off">
+                  <span *ngIf="loginFrm.get('password').hasError('required')"><span class="axis-required-indicator">Please
+                      enter password.</span></span>
+                  <span *ngIf="loginFrm.get('password').hasError('pattern')"><span class="axis-required-indicator">Special
+                      characters are not allowed.</span></span>
+                </div>
+                <!-- <div class="axis-form-group">
+                    <axis-captcha name="captcha" formControlName="captcha" required></axis-captcha>  
+                </div> -->
+                <div class="axis-form-group">
+                  <input type="submit" axis-button data-kind="primary" [disabled]="!loginFrm.valid" value="Log in" />
+                  <input type="reset" axis-button data-kind="primary" [disabled]='!loginFrm.valid' value="Reset" />
+                  <span><a role="button" (click)="registerFrm()">Register</a></span>
+                </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>

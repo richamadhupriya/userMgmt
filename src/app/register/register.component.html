@@ -1,0 +1,55 @@
+<div class="container">
+
+  <div class=" row">
+    <div class="axis-col-lg-4 axis-col-md-6 axis-col-sm-6 axis-col-xs-12">
+      <div class="form">
+
+        <form [formGroup]="registerFrm" (submit)="register()">
+          
+              <div class="axis-form-group">
+                  <label for="userId" class="axis-control-label">User Id<span class="axis-required-indicator">*</span></label>
+                  <input class="axis-form-control" type="text" formControlName="userId" #userId axis-input-clear autocomplete="off">
+                  <span *ngIf="registerFrm.get('userId').hasError('required')"><span class="axis-required-indicator">Please
+                      enter user id.</span></span>
+                  <span *ngIf="registerFrm.get('userId').hasError('pattern')"><span class="axis-required-indicator">Special
+                      characters are not allowed.</span></span>
+                </div>
+
+                <div class="axis-form-group">
+                  <label for="fName" class="axis-control-label">First Name<span class="axis-required-indicator">*</span></label>
+                  <input class="axis-form-control" type="text" formControlName="fName" #fName axis-input-clear autocomplete="off">
+                  <span *ngIf="registerFrm.get('fName').hasError('required')"><span class="axis-required-indicator">Please
+                      enter first name.</span></span>
+                  <span *ngIf="registerFrm.get('fName').hasError('pattern')"><span class="axis-required-indicator">Special
+                      characters are not allowed.</span></span>
+                </div>
+
+                <div class="axis-form-group">
+                  <label for="lName" class="axis-control-label">Last Name<span class="axis-required-indicator">*</span></label>
+                  <input class="axis-form-control" type="text" formControlName="lName" #lName axis-input-clear autocomplete="off">
+                  <span *ngIf="registerFrm.get('lName').hasError('required')"><span class="axis-required-indicator">Please
+                      enter last name.</span></span>
+                  <span *ngIf="registerFrm.get('lName').hasError('pattern')"><span class="axis-required-indicator">Special
+                      characters are not allowed.</span></span>
+                </div>
+      
+                <div class="axis-form-group">
+                  <label for="password" class="axis-control-label">Password<span class="axis-required-indicator">*</span></label>
+                  <input class="axis-form-control" type="password" formControlName="password" #password axis-input-clear
+                    autocomplete="off">
+                  <span *ngIf="registerFrm.get('password').hasError('required')"><span class="axis-required-indicator">Please
+                      enter password.</span></span>
+                  <span *ngIf="registerFrm.get('password').hasError('pattern')"><span class="axis-required-indicator">Special
+                      characters are not allowed.</span></span>
+                </div>
+                <div class="axis-form-group">
+                  <input type="submit" axis-button data-kind="primary" [disabled]="!registerFrm.valid" value="Submit" />
+                  <input type="reset" axis-button data-kind="primary" [disabled]='!registerFrm.valid' value="Reset" />
+                  <a role="button" (click)="cancelRegistration()">Cancel</a>
+                </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../out-tsc/app",
+    "types": []
+  },
+  "include": [
+    "*.ts",
+    "**/*.ts",
+    "../node_modules/axis-components/components/*.ts",
+    "../node_modules/axis-components/components/**/*.ts",
+    "../node_modules/axis-charts/charts/*.ts",
+    "../node_modules/axis-charts/charts/**/*.ts"
+],
+"exclude": [
+  "test.ts",
+  "*.spec.ts",
+  "**/*.spec.ts",
+  "../node_modules/axis-components/**/*.spec.*",
+  "node_modules/axis-components/**/*.spec.*"
+]
+}

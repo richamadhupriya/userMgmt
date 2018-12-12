@@ -1,0 +1,37 @@
+[
+    {
+        "name": "A",
+        "id": "1",
+        "email": "abc@abc.com",
+        "mobile": "2357257",
+        "location": "Pune"
+    },
+    {
+        "name": "B",
+        "id": "2",
+        "email": "bcd@bcd.com",
+        "mobile": "2357257",
+        "location": "HYD"
+    },
+    {
+        "name": "C",
+        "id": "3",
+        "email": "cde@cde.com",
+        "mobile": "2357257",
+        "location": "Bengaluru"
+    },
+    {
+        "name": "D",
+        "id": "4",
+        "email": "abc@abc.com",
+        "mobile": "2357257",
+        "location": "Pune"
+    },
+    {
+        "name": "E",
+        "id": "5",
+        "email": "hd@dh.com",
+        "mobile": "123456789",
+        "location": "HYD"
+    }
+]

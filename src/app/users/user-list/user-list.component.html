@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="axis-col-lg-6 axis-col-md-6 axis-col-sm-6 axis-col-xs-6">
+      <button axis-button data-kind="primary" (click)="createNewUser()"><span class="glyphicon glyphicon-plus"></span></button>
+    </div>
+  </div>
+  
+  <div class="row" style="margin-top:20px;">
+    <div class="axis-col-lg-6 axis-col-md-6 axis-col-sm-6 axis-col-xs-6">
+      <app-user *ngFor='let user of user;let i=index' [userIndex]="i" [user]="user"></app-user>
+    </div>
+  </div>
+</div>

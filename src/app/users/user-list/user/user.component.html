@@ -1,0 +1,26 @@
+
+  <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-4 col-sm-3">
+          <a class="thumbnail clearfix" (click)="getUser()" [routerLink]="[userIndex]" routerLinkActive="active" style="text-decoration: none; cursor:pointer;">
+              
+              <div class="pull-left">
+                  <h3>Name: {{selectedUser.name}}</h3>
+                  <p>Id: {{selectedUser.id}}</p>
+                  <p>Email: {{selectedUser.email}}</p>
+                  <p>Mobile: {{selectedUser.mobile}}</p>
+                  <p>Location: {{selectedUser.location}}</p>
+              </div>
+
+              <div class="pull-right">
+                <button axis-button data-kind="primary"><span class="glyphicon glyphicon-pencil" (click)="update(selectedUser,userIndex)" data-toggle="modal" data-target="#updateModal"></span></button>
+                <button axis-button data-kind="primary"><span class="glyphicon glyphicon-trash"></span></button>
+              </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="updateModal">
+
+    </div>

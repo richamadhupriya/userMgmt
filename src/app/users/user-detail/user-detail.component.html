@@ -1,0 +1,16 @@
+<div class="container" id="details">
+
+  <div class="row">
+    <div class="details col-lg-6 col-md-6 col-sm-6 col-xs-12" #user>
+      <h3>Name: {{userDetail.name}}</h3>
+      <p>Id: {{userDetail.id}}</p>
+      <p>Email: {{userDetail.email}}</p>
+      <p>Mobile: {{userDetail.mobile}}</p>
+      <p>Location: {{userDetail.location}}</p>
+
+      <button axis-button data-kind="primary">Update</button>
+      <button axis-button data-kind="primary" (click)="delete()">Delete</button>
+    </div>
+
+  </div>
+</div>
