@@ -11,6 +11,7 @@ const routes: Routes = [
     path:'register',
     component: RegisterComponent
   },
+  
   {
     path:'user',
     component:UsersComponent,
@@ -28,10 +29,6 @@ const routes: Routes = [
   },
   {
     path:'login',
-    component:LoginComponent
-  },
-  {
-    path:'',
     component:LoginComponent
   }
 ];

@@ -10,13 +10,17 @@
     "../node_modules/axis-components/components/*.ts",
     "../node_modules/axis-components/components/**/*.ts",
     "../node_modules/axis-charts/charts/*.ts",
-    "../node_modules/axis-charts/charts/**/*.ts"
+    "../node_modules/axis-charts/charts/**/*.ts",
+    "../node_modules/axis-ui-generator/*.ts",
+    "../node_modules/axis-ui-generator/**/*.ts"
 ],
 "exclude": [
   "test.ts",
   "*.spec.ts",
   "**/*.spec.ts",
   "../node_modules/axis-components/**/*.spec.*",
-  "node_modules/axis-components/**/*.spec.*"
+  "node_modules/axis-components/**/*.spec.*",
+  "../node_modules/axis-ui-generator/*.spec.ts",
+  "../node_modules/axis-ui-generator/**/*.spec.ts"
 ]
 }

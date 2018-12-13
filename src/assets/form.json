@@ -1,0 +1,118 @@
+
+    [
+        {
+            "type": "number",
+            "name": "userId",
+            "label": "ID:",
+            "required": "true",
+            "pattern": "[0-9]",
+            "autocomplete": "off",
+            "errorMessage": [
+                {
+                    "required": "Please enter your ID",
+                    "pattern": "Please enter numbers only"
+                }
+            ]
+        },
+        {
+            "type": "password",
+            "name": "password",
+            "label": "Password",
+            "required": "true",
+            "pattern": "[A-Za-z0-9+ ]",
+            "minLength": "6",
+            "maxlength": "6",
+            "errorMessage": [
+                {
+                    "required": "Please enter password",
+                    "minLength": "Length of password must be 6 characters only"
+                }
+            ]
+        },
+        {
+            "type": "radio",
+            "name": "gender",
+            "label": "Gender",
+            "options": [
+                {
+                    "value": "Male",
+                    "label": "Male",
+                    "isChecked": "false"
+                },
+                {
+                    "value": "Female",
+                    "label": "Female",
+                    "isChecked": "false"
+                }
+            ],
+            "required": "true"
+        },
+        {
+            "type": "datepicker",
+            "name": "dateOfJoining",
+            "label": "Date of Joining",
+            "required": "true"
+        },
+        {
+            "type": "dropdown",
+            "name": "designation",
+            "label": "Designation",
+            "required": "true",
+            "options": [
+                {
+                    "value": "Software Engineer",
+                    "name": "Software Engineer"
+                },
+                {
+                    "value": "Senior Software Engineer",
+                    "name": " Senior Software Engineer"
+                },
+                {
+                    "value": "Consultant",
+                    "name": "Consultant"
+                },
+                {
+                    "value": "SeniorConsultant",
+                    "name": "SeniorConsultant"
+                }
+            ]
+        },
+        {
+            "type": "checkboxGroup",
+            "name": "location",
+            "label": "Location Preferences",
+            "required": "true",
+            "fields": [
+                {
+                    "type": "checkbox",
+                    "name": "Pune",
+                    "label": "Pune"
+                },
+                {
+                    "type": "checkbox",
+                    "name": "Hyderabad",
+                    "label": "Hyderabad"
+                },
+                {
+                    "type": "checkbox",
+                    "name": "Bangalore",
+                    "label": "Bangalore"
+                },
+                {
+                    "type": "checkbox",
+                    "name": "Kolkata",
+                    "label": "Kolkata"
+                }
+            ]
+        },
+        {
+            "type": "submit",
+            "name": "submitBtn",
+            "submitText": "Submit"
+        },
+        {
+            "type": "reset",
+            "name": "resetBtn",
+            "resetText": "Reset"
+        }
+    ]
