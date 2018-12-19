@@ -21,7 +21,8 @@ export class AppComponent implements OnInit{
     this.form = new FormGroup({
       fields: new FormControl(JSON.stringify(this.fields))
     });
-
+   
+    
     // console.log(this.form);
   }
 
@@ -30,4 +31,7 @@ export class AppComponent implements OnInit{
     return this.fields;
   }
   
+  submit(value: {[name: string]: any}) {
+    console.log(value);
+  }
 }

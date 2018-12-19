@@ -1,8 +1,10 @@
-<div [formGroup]="form">
-    <div *ngFor="let option of field.options">
-        
-        <label>
-            {{option.label}}
-        </label><input type="radio" value={{option.value}}>
+<div [formGroup]="form" [ngClass]="{'has-axis-required':form.get(field.name).hasError('required')}">
+    <axis-radio-button-wrapper [formControlName]="field.name">
+        <axis-radio heading={{option.name}} cid={{option.name}} *ngFor="let option of field.options" name={{field.name}} [value]="option.value" (click)="onClickRadio($event)"></axis-radio>
+    </axis-radio-button-wrapper>
+    
+    <div *ngIf="form.controls[field.name].invalid">
+        <span *ngIf="form.controls[field.name].errors.required" class="axis-required-indicator">{{field.errorMessage}}</span>
     </div>
+    
 </div>

@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class FieldBuilderComponent implements OnInit {
   @Input() field:any;
   @Input() form:any;
-  
+
   constructor() { }
 
   ngOnInit() {

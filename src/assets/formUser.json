@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "password": "123",
+        "gender": "Male",
+        "dateOfJoining": "12/05/2018",
+        "designation": "Software Engineer",
+        "location": [
+            "Pune"
+        ]
+    }
+]

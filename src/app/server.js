@@ -5,6 +5,9 @@ var parser = require('body-parser');
 var user = fs.readFileSync("../assets/user.json");
 var userData = JSON.parse(user);
 
+var form = fs.readFileSync("../assets/formUser.json");
+var formUserData = JSON.parse(form);
+
 console.log('Running server');
 
 app.use(parser.json());
@@ -21,6 +24,22 @@ app.route('/rest/api/post').post((req, res) => {
   console.log(data);
   userData.push(data);
   fs.writeFileSync('../assets/user.json', JSON.stringify(userData));
+});
+
+app.route('/rest/api/postForm').post((req, res) => {
+  console.log("Post Invoked");
+  var newUser = req.body;
+  let data = {
+    "id": newUser.id,
+    "password": newUser.password,
+    "gender": newUser.gender,
+    "dateOfJoining": newUser.dateOfJoining,
+    "designation":newUser.designation,
+    "location":newUser.location
+  }
+  console.log(data);
+  userData.push(data);
+  fs.writeFileSync('../assets/formUser.json', JSON.stringify(formUserData));
 });
 
 app.route('/rest/api/update').post((req, res) => {

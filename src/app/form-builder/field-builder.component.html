@@ -1,25 +1,29 @@
 <div class="form-group" [formGroup]="form" class="container">
-  <label [attr.for]="field.label">{{field.label}}<span *ngIf="field.required">*</span></label> 
-  <!-- <div *ngSwitch="field.type">
-  <app-text *ngSwitchCase="'text'" [field]="field" [form]="form"></app-text>
-  <app-radio *ngSwitchCase="'radio'" [field]="field" [form]="form"></app-radio>
-    </div> -->
+    <label [attr.for]="field.label">{{field.label}}<span class="axis-required-indicator" *ngIf="field.required">*</span></label>
 
     <div *ngIf="field.type ==='number'">
-        <app-text [field]="field" [form]="form"></app-text>
-      </div>
+      <app-text [field]="field" [form]="form"></app-text>
+    </div>
     <div *ngIf="field.type ==='password'">
       <app-text [field]="field" [form]="form"></app-text>
     </div>
     <div *ngIf="field.type ==='radio'">
-        <app-radio [field]="field" [form]="form"></app-radio>
+      <app-radio [field]="field" [form]="form"></app-radio>
     </div>
 
     <div *ngIf="field.type ==='dropdown'">
-        <app-dropdown [field]="field" [form]="form"></app-dropdown>
+      <app-dropdown [field]="field" [form]="form"></app-dropdown>
     </div>
 
-    <!-- <div *ngIf="field.type === 'checkbox'">
+    <div *ngIf="field.type ==='checkbox'">
       <app-checkbox [field]="field" [form]="form"></app-checkbox>
-    </div> -->
-  </div>
+    </div>
+
+    <div *ngIf="field.type === 'date'">
+      <app-date [field]="field" [form]="form"></app-date>
+    </div>
+
+    <div *ngIf="field.type ==='submit'" class="form-inline">
+      <app-button [field]="field" [form]="form"></app-button>
+    </div>
+</div>

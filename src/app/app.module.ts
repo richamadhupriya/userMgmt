@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AxisComponentsAllModule } from 'axis-components/components/components.module';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -14,6 +16,7 @@ import {UserComponent} from './users/user-list/user/user.component';
 import { LoginComponent } from './login/login.component';
 import { FormService } from './form.service';
 import {FormBuilderModule} from './form-builder/form-builder.module';
+
 
 
 @NgModule({
@@ -32,7 +35,9 @@ import {FormBuilderModule} from './form-builder/form-builder.module';
     BrowserModule,
     AppRoutingModule,
     AxisComponentsAllModule,
-    FormBuilderModule
+    FormBuilderModule,
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [FormService],
   bootstrap: [AppComponent]

@@ -1,18 +1,18 @@
-
 <div class="container" id="recipe">
 
   <div class="row">
     <div class="col-lg-6 col-md-5 col-sm-6 col-xs-12">
-      <app-user-list></app-user-list>
-      
-    </div>
-    
-    <div class="col-lg-6 col-md-7 col-sm-6 col-xs-12" >
-      <app-user-detail *ngIf="selectedUser; else default" [userDetail]="selectedUser" style="margin-left:780px;"></app-user-detail>
-      <ng-template #default>
+
+      <div>
+        <app-user-list></app-user-list>
+      </div>
+
+      <div class="col-lg-6 col-md-7 col-sm-6 col-xs-12">
+        <app-user-detail *ngIf="selectedUser; else default" [userDetail]="selectedUser" style="margin-left:780px;"></app-user-detail>
+        <ng-template #default>
           <router-outlet></router-outlet>
         </ng-template>
-    </div>
+      </div>
 
+    </div>
   </div>
-</div>

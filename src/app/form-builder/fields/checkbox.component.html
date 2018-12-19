@@ -1,10 +1,9 @@
-<div [formGroup]="form">
-    <div formGroupName={{field.name}}>
-        <div *ngFor="let option of field.options">
-            <label >
-                <input formControlName={{option.value}}  type="checkbox" id="chkbox" value="option1" />{{option.label}}
-            </label>
-        </div>
-    </div>
+<div [formGroup]="form" [ngClass]="{'has-axis-required':form.get(field.name).hasError('required')}">
+    <axis-checkbox-wrapper formControlName={{field.name}}>
+        <axis-checkbox cid={{option.name}} *ngFor="let option of field.options" name={{field.name}} value={{option.name}} (click)="getValue($event)">{{option.name}}</axis-checkbox>
+    </axis-checkbox-wrapper>
 
+    <div *ngIf="form.controls[field.name].invalid">
+        <span *ngIf="form.controls[field.name].errors.required" class="axis-required-indicator">{{field.errorMessage}}</span>
+    </div>
 </div>

@@ -25,6 +25,18 @@ export class UserDataService {
     })
   }
 
+  postFormData(id:string,password:string,gender:string,dateOfJoining:string,designation:string,location:string): Observable<any> {
+
+    return this.http.post('http://localhost:4210/rest/api/postForm', {
+      id: id,
+      password:password,
+      gender: gender,
+      dateOfJoining: dateOfJoining,
+      designation: designation,
+      location: location
+    })
+  }
+
   updateData(name: string, id: string, email: string, mobile: string, location: string): Observable<any> {
 
     return this.http.post('http://localhost:4210/rest/api/update', {

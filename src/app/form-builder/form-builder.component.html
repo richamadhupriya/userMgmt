@@ -1,12 +1,15 @@
-<form  [formGroup]="form" class="form-horizontal">
-  <div *ngFor="let field of fieldData">
-      <app-field-builder [field]="field" [form]="form"></app-field-builder>
-  </div>
-  <div class="form-row"></div>
-  <div class="form-group row">
-    <div class="col-md-3"></div>
-    <div class="col-md-9">
-      <button type="submit" [disabled]="!form.valid" class="btn btn-primary">Submit</button>
+<div class="container " style="max-width:300px">
+    <div class="axis-grid">
+        <div class="axis-col-md-4">
+      <form [formGroup]="form" id="form" class="form-horizontal" (submit)="onSubmit(form)">
+        <div *ngFor="let field of fieldData">
+          <app-field-builder [field]="field" [form]="form"></app-field-builder>
+        </div>
+      </form>
     </div>
   </div>
-</form>
+  
+</div>
+
+
+
