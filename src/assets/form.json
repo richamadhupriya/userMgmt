@@ -7,12 +7,7 @@
         "pattern": "[0-9]",
         "autocomplete": "off",
         "placeholder":"Enter your id(numeric characters only)",
-        "errorMessage": [
-            {
-                "required": "Please enter your ID",
-                "pattern": "Please enter numbers only"
-            }
-        ]
+        "errorMessage": "Please fill out this field"
     },
     {
         "type": "password",
@@ -23,12 +18,7 @@
         "minLength": "6",
         "maxlength": "6",
         "placeholder":"Enter your password",
-        "errorMessage": [
-            {
-                "required": "Please enter password",
-                "minLength": "Length of password must be 6 characters only"
-            }
-        ]
+        "errorMessage": "Please fill out this field"
     },
     {
         "type": "radio",
@@ -109,7 +99,7 @@
             {
                 "id":"chk02",
                 "value": "Hyderabad",
-                "name": " Hyderabad"
+                "name": "Hyderabad"
             },
             {
                 "id":"chk03",
@@ -120,6 +110,16 @@
                 "id":"chk04",
                 "value": "Kolkata",
                 "name": "Kolkata"
+            },
+            {
+                "id":"chk05",
+                "value": "Chennai",
+                "name": "Chennai"
+            },
+            {
+                "id":"chk06",
+                "value": "Noida",
+                "name": "Noida"
             }
         ]
     },

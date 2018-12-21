@@ -20,7 +20,7 @@ export class FormBuilderComponent implements OnInit {
   ngOnInit() {
     let formControls = {};
     for (let field of this.fields) {
-      formControls[field.name] = new FormControl('', [Validators.required,Validators.minLength(6)]);
+      formControls[field.name] = new FormControl('',Validators.required);
     }
     this.form = new FormGroup(formControls);
 
@@ -32,10 +32,12 @@ export class FormBuilderComponent implements OnInit {
   }
 
   onSubmit(form){
-    event.preventDefault();
-   this.submit.emit(form.value);
-   event.stopPropagation();
-   this.form.reset();
+   
+    this.submit.emit(form.value);
+  //  event.preventDefault();
+  //  event.stopPropagation();
+  //  this.form.reset();
+  console.log(form.valid)
   }
 
 }

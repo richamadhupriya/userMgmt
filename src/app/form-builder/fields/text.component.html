@@ -1,7 +1,7 @@
 
-<div [formGroup]="form" [ngClass]="{'has-axis-required':form.controls[field.name].errors.required}">
+<div [formGroup]="form" [ngClass]="{'has-axis-required':form.get(field.name).hasError('required')}">
     <input type={{field.type}} class="axis-form-control" id={{field.name}} name={{field.name}} formControlName={{field.name}}
-        [placeholder]="field.placeholder" />
+        [placeholder]="field.placeholder"  />
 
-    <div *ngIf="form.controls[field.name].errors.required" class="axis-required-indicator">Field is required</div>
+    <div *ngIf="form.get(field.name).hasError('required')" class="axis-required-indicator">{{field.errorMessage}}</div>
 </div>

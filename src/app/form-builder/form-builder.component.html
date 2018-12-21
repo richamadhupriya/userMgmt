@@ -1,14 +1,17 @@
-<div class="container " style="max-width:300px">
+<div class="container ">
+    <axis-alert data-kind="warning" data-inline>
+        All fields are required.
+      </axis-alert>
     <div class="axis-grid">
-        <div class="axis-col-md-4">
+        <div class="axis-col-md-6">
       <form [formGroup]="form" id="form" class="form-horizontal" (submit)="onSubmit(form)">
         <div *ngFor="let field of fieldData">
           <app-field-builder [field]="field" [form]="form"></app-field-builder>
         </div>
       </form>
+
     </div>
   </div>
-  
 </div>
 
 

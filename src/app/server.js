@@ -26,21 +26,21 @@ app.route('/rest/api/post').post((req, res) => {
   fs.writeFileSync('../assets/user.json', JSON.stringify(userData));
 });
 
-app.route('/rest/api/postForm').post((req, res) => {
-  console.log("Post Invoked");
-  var newUser = req.body;
-  let data = {
-    "id": newUser.id,
-    "password": newUser.password,
-    "gender": newUser.gender,
-    "dateOfJoining": newUser.dateOfJoining,
-    "designation":newUser.designation,
-    "location":newUser.location
-  }
-  console.log(data);
-  userData.push(data);
-  fs.writeFileSync('../assets/formUser.json', JSON.stringify(formUserData));
-});
+// app.route('/rest/api/postForm').post((req, res) => {
+//   console.log("Post Invoked");
+//   var newUser = req.body;
+//   let data = {
+//     "id": newUser.id,
+//     "password": newUser.password,
+//     "gender": newUser.gender,
+//     "dateOfJoining": newUser.dateOfJoining,
+//     "designation":newUser.designation,
+//     "location":newUser.location
+//   }
+//   console.log(data);
+//   userData.push(data);
+//   fs.writeFileSync('../assets/formUser.json', JSON.stringify(formUserData));
+// });
 
 app.route('/rest/api/update').post((req, res) => {
   console.log("Update Invoked");

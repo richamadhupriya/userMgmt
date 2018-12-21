@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import {ReactiveFormsModule} from '@angular/forms';
 import { FormBuilderComponent } from './form-builder.component';
+import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+
 
 describe('FormBuilderComponent', () => {
   let component: FormBuilderComponent;
@@ -8,7 +10,9 @@ describe('FormBuilderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FormBuilderComponent ]
+      imports:[ReactiveFormsModule],
+      declarations: [ FormBuilderComponent ],
+      schemas:[CUSTOM_ELEMENTS_SCHEMA]
     })
     .compileComponents();
   }));

@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule,CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AxisComponentsAllModule } from 'axis-components/components/components.module';
@@ -16,7 +16,9 @@ import {UserComponent} from './users/user-list/user/user.component';
 import { LoginComponent } from './login/login.component';
 import { FormService } from './form.service';
 import {FormBuilderModule} from './form-builder/form-builder.module';
-
+import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
+import {FormComponent} from './form-builder/form.component';
+import { AxisUiGeneratorModule } from 'axis-ui-generator/axis-ui-generator.module'; 
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import {FormBuilderModule} from './form-builder/form-builder.module';
     EditUserComponent,
     UserDetailComponent,
     UserComponent,
-    LoginComponent
+    LoginComponent,
+    DynamicFormComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +41,8 @@ import {FormBuilderModule} from './form-builder/form-builder.module';
     AxisComponentsAllModule,
     FormBuilderModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AxisUiGeneratorModule
   ],
   providers: [FormService],
   bootstrap: [AppComponent]

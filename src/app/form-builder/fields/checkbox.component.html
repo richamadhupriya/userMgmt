@@ -3,7 +3,7 @@
         <axis-checkbox cid={{option.name}} *ngFor="let option of field.options" name={{field.name}} value={{option.name}} (click)="getValue($event)">{{option.name}}</axis-checkbox>
     </axis-checkbox-wrapper>
 
-    <div *ngIf="form.controls[field.name].invalid">
-        <span *ngIf="form.controls[field.name].errors.required" class="axis-required-indicator">{{field.errorMessage}}</span>
+    <div *ngIf="form.get(field.name).invalid">
+        <span *ngIf="form.get(field.name).hasError('required')" class="axis-required-indicator">{{field.errorMessage}}</span>
     </div>
 </div>
